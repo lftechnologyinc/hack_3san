@@ -30,5 +30,7 @@ class MainController < ApplicationController
 	end
 	
 	def message_page
+		#@employee = Employee.find(:all)
+		@employee = Employee.find(:all).paginate(page: params[:page], per_page: 10 )
 	end
 end
