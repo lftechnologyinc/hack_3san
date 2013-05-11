@@ -1,0 +1,13 @@
+<% binding.pry %>
+<div>
+	<ul>
+		<% @department.each do |t| %>
+			<li>
+			<% binding.pry %>
+			<%= link_to t.department_name ,main_message_page_path(:id=>t.id)%>
+				</li>
+			<% end %>
+			<li> <%=link_to "All Employee",main_message_page_path%> </li>
+		</ul>
+	<div>
+<%= Date.current.to_formatted_s(:long_ordinal) %>
