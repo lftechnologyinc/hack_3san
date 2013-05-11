@@ -6,6 +6,7 @@ class MainController < ApplicationController
   end
 
   def add
+  	@employee = Employee.new #(params[:employee])	
   end
 
   def delete
@@ -19,7 +20,6 @@ class MainController < ApplicationController
 	if @employee.nil?
 		redirect_to :root
 	else
-		binding.pry
 		session[:current_employee]=@employee.id
 		redirect_to main_main_page_path
 	end
@@ -27,10 +27,8 @@ class MainController < ApplicationController
 
 	def main_page
 		@department = Department.all
-		binding.pry
 	end
 	
 	def message_page
-		binding.pry	
 	end
 end
