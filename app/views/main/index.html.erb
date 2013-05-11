@@ -1,7 +1,7 @@
-<%= form_tag("/main/log_in", :method => "post") do %>
+<%= form_tag("/main/log_in", :method => "post", :id => "form-login") do %>
 	  <%= label_tag(:q, "Name:") %>
-		<%= text_field_tag(:name) %>
+		<%= text_field_tag 'name', nil, :class => "required" %>
 		<%= label_tag(:q, "Password:") %>
-		  <%= password_field_tag(:password) %>
+		  <%= password_field_tag(:password, nil, :class => "required", :minlength => 5) %>
 			  <%= submit_tag("Log In") %>
 			<% end %>
