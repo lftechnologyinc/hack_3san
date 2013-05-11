@@ -9,6 +9,8 @@ Hack3san::Application.routes.draw do
 
   get "main/create"
 
+	post "main/log_in"
+	get "main/main_page"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
