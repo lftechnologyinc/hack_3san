@@ -1,11 +1,13 @@
-<%= will_paginate @employee %>
-<table border="1">
+<div class="pagination">
+	<%= will_paginate @employee %>
+</div> 
+<table border="1", class="table">
 	<tr>
 		<th>Name</th>
 		<th>Phone</th>
 		<th>Salary</th>
 		<th>Email</th>
-		<th>Action</th>
+		<!-- <th>Action</th> -->
 	</tr>
 	
 	<% @employee.each do |emp| %>
@@ -14,7 +16,7 @@
 		<td><%= emp.phone %></td>
 		<td><%= emp.salary %></td>
 		<td><%= emp.email %></td>
-		<td><%= link_to "Send", "#" %></td>
+		<!-- <td><%= link_to "Send", "#" %></td> -->
 	</tr>
 	<% end %>
 </table>

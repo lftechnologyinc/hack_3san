@@ -9,6 +9,8 @@ Hack3san::Application.routes.draw do
 
   get "main/create"
 
+  get "main/log_out"
+
 	post "main/log_in"
 	get "main/main_page"
 	get "main/message_page"
