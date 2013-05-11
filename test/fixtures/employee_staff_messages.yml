@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  send_from: MyString
+  send_to: MyString
+  message: MyString
+  deliver_status: false
+
+two:
+  send_from: MyString
+  send_to: MyString
+  message: MyString
+  deliver_status: false

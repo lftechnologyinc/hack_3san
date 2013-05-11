@@ -1,24 +1,42 @@
-<div class="pagination">
-	<%= will_paginate @employee %>
-</div> 
-<table border="1", class="table">
-	<tr>
-		<th>Name</th>
-		<th>Phone</th>
-		<th>Salary</th>
-		<th>Email</th>
-		<!-- <th>Action</th> -->
-	</tr>
-	
-	<% @employee.each do |emp| %>
-	<tr>
-		<td><%= emp.name %></td>
-		<td><%= emp.phone %></td>
-		<td><%= emp.salary %></td>
-		<td><%= emp.email %></td>
-		<!-- <td><%= link_to "Send", "#" %></td> -->
-	</tr>
-	<% end %>
-</table>
-
-<%#= debug @employee %>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2">
+			<ul>
+				<% @employee.each do |t| %>
+					<li>	
+					<%= t.name %>
+					</li>
+				<% end %>
+				</ul>
+		</div>
+		<div class="span10">
+			<div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Send By</th>
+							
+							<th>Send To</th>
+							
+							<th>Message</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @message.each do |t| %>
+							<tr>
+								<td><%= t.send_from %></td>
+								<td><%= t.send_to %></td>
+								<td><%= t.message %></td>
+								</tr>
+						<%end %>
+						</tbody>
+					</table>
+			</div>
+<%= form_tag("/main/message_deliver", :method => "post") do %>
+		<%= text_field_tag(:message) %>
+			  <%= submit_tag("Send") %>
+			<% end %>
+			<!--Body content-->
+		</div>
+	</div>
+</div>
