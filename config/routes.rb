@@ -1,4 +1,14 @@
 Hack3san::Application.routes.draw do
+  get "main/index"
+
+  get "main/new"
+
+  get "main/add"
+
+  get "main/delete"
+
+  get "main/create"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
