@@ -1,7 +1,32 @@
-<%= form_tag("/main/log_in", :method => "post") do %>
-	<%= label_tag(:q, "Name:") %>
-	<%= text_field_tag(:name) %>
-	<%= label_tag(:q, "Password:") %>
-	<%= password_field_tag(:password) %>
-	<%= submit_tag("Log In") %>
-<% end %>
+<div id="container">
+  <div class="access-home">
+    <div id="logo">
+      <h1><a href="#">3S.A.N Groups</a></h1>
+    </div>
+    <div class="access_box">
+      <%= form_tag("/main/log_in", :method => "post", :class=>'form-horizontal') do %>
+        <h3>Log In</h3>
+        <div class="input-prepend">
+          <span class="add-on"><%= image_tag("icon-user.png",:alt=>'') %></span>
+          <%= text_field_tag(:name,nil,:placeholder=>'Username') %>
+        </div>
+        <div class="input-prepend">
+          <span class="add-on"><%= image_tag("icon-key.png", :alt => "") %></span>
+          <%= password_field_tag(:password,nil,:placeholder=>'Password') %>
+        </div> 
+        <div class="control-group" style="margin-bottom:0; line-height:45px;">
+          <div class="controls">
+            <a href="#" class="forgot-pass">Forgot Password ?</a>
+            <%= submit_tag("Log In",:class=>'btn btn-large btn-danger') %>
+          </div>
+        </div>
+
+
+      <% end %>
+    </div>
+    <div class="access-shadow"></div>
+    <div align="center">Copyrights &copy; 2013, 3SAN Groups. All Rights Reserved.</div>
+  </div>
+</div>
+
+

@@ -1,0 +1,95 @@
+@font-face {
+    
+    font-family: "dax-regularregular";
+    font-style: normal;
+    font-weight: normal;
+    src: asset-url('dax-regular-webfont.eot?#iefix',font);
+    src: asset-url('dax-regular-webfont.eot?#iefix',font) format("embedded-opentype"),
+        asset-url('dax-regular-webfont.woff',font) format("woff"),
+        asset-url('dax-regular-webfont.ttf',font) format("truetype"), 
+        asset-url('dax-regular-webfont.svg#dax-regularregular',font) format("svg");
+}
+
+body{
+    color: rgb(51,51,51);
+    /*text-shadow:1px 1px 0 #fff;*/
+    font:13px Arial, Helvetica, sans-serif;
+    line-height:25px;
+    background: url(/assets/bgtile.jpg);
+}
+svg {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    margin:0;
+    padding:0;
+    image-rendering:optimizeSpeed !important;
+    shape-rendering:optimizeSpeed !important;
+    color-rendering:optimizeSpeed !important;
+    text-rendering:optimizeSpeed !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:dax-regularregular;
+}
+h3{ 
+    color:#666;
+    margin-bottom:15px;
+    font-size:18px !important;
+    line-height:30px;
+    text-shadow:1px 1px 0 #fff;
+}
+h3 span{ color: #666666;}
+a {
+    color:#333;
+    text-decoration: none;
+    transition:all 0.09s ease-in-out;
+    -moz-transition:all 0.09s ease-in-out;
+    -webkit-transition:all 0.09s ease-in-out;
+    -o-transition:all 0.09s ease-in-out;
+}
+a:hover{ color:#333;}
+
+.access_box{
+    width:425px;
+    margin:0 auto;
+    padding:5px;
+    border-radius:15px;
+    background: #fff;	
+    border:10px solid rgba(0,0,0,0.2);
+}
+.access-shadow{ background:url(/assets/aceess-shadow.png) no-repeat center bottom; height:25px; width:100%; display:block}
+.access_box .form-horizontal{
+    background:#f0f0f0;
+    border:1px #dddbdb solid;
+    padding:25px;
+    border-radius:10px;
+}
+.access-home{ 
+    padding:75px 0 0 0; 
+    /*width:425px; */
+    margin:0 auto;
+    font-family: "dax-regularregular";
+}
+.access-home form{ margin:0}
+.access-home h3{ margin:0 0 10px 0; text-transform:uppercase; font-weight:normal}
+.access-home .form-horizontal .control-label{ width:auto}
+.access-home .form-horizontal .controls{ margin:0}
+.access-home input,.access-home button{font-family: "dax-regularregular";}
+.access-home button{ padding-left:40px; padding-right:40px;}
+.access_box input[type="text"],.access_box input[type="password"]{ width:325px; height:32px; font-size:18px;}
+.access-home .input-prepend .add-on{ height:32px; line-height:32px;}
+.access-home .input-prepend{ margin-bottom:15px;}
+.forgot-pass{ float:right; width:auto;}
+#logo{
+    width:280px; margin:0 auto;
+    height:75px; margin-bottom:25px;
+    text-indent:-9999px;
+    background:url(/assets/logo.png) no-repeat;
+}
+#logo a{
+    display:block;
+    width:280px;
+    height:75px;
+}
