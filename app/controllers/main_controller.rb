@@ -1,19 +1,8 @@
 class MainController < ApplicationController
-  def index
-  end
-
-  def new
-  end
-
   def add
-  	@employee = Employee.new #(params[:employee])	
+  	@employee = Employee.new 
   end
 
-  def delete
-  end
-
-  def create
-  end
 
 	def log_in
 	@employee = Employee.find(:first, :conditions => [ "name = ? AND password = ?", params[:name],params[:password]])
@@ -30,7 +19,15 @@ class MainController < ApplicationController
 	end
 	
 	def message_page
-		#@employee = Employee.find(:all)
-		@employee = Employee.find(:all).paginate(page: params[:page], per_page: 10 )
+		@employee = Employee.find(:all).paginate(page: params[:page], per_page: 1)
+
+		#Mail.msg_send(@employee).mail.deliver
+		
 	end
+
+	def log_out
+		session[:current_employee_id] = nil
+		redirect_to root_url, notice: "You have successfully logged out!"	
+	end
+	
 end

@@ -1,0 +1,6 @@
+<header>
+	<aside>
+		Welcome <%= Employee.find_by_id(session[:current_employee]).name %>	 ||	
+		<%= link_to "Log Out", main_log_out_url %>
+	</aside>
+</header>

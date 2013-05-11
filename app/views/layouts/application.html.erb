@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hack3san</title>
+    <title>3SAN</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -16,93 +16,27 @@
     </script>
   </head>
   <body>
-    <header>
-      <div class="main-menu navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="index.html">HomePlete</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class=""><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#contractors">Contractors</a></li>
-                    <li><a href="#facebookFriends">Facebook Friends</a></li>
-                  </ul>
-                </li>
-                <li><a href="blackbook.html">Black Book</a></li>
-                <li class='dropdown'>
-                  <a class='dropdown-toggle' data-toggle='dropdown' href="#">Contractor Wizard<b class='caret'></b></a>
-                  <ul class='dropdown-menu'>
-                    <li><a href='pick_contractor.html'>Pick A Contractor</a></li>
-                    <li><a href='contractor-wizzard.html'>Friend's Contractor List</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="pull-right nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">User<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="login.html">Log In</a></li>
-                    <li><a href="register.html">Register</a></li>
-                  </ul>
-                </li>
-
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </div>
-      </div>
-      <hr>
-    </header>
-    <section>
       <%= yield %>
-    </section>
-    <footer>
-      <div id="footer" class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-footer">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <div class="footer-nav  nav-collapse collapse pull-right" id="nav-collapse-footer"> 
-              <ul class="nav">
-                <li class=''>
-                  <a href="index.html" >Home</a>
-                </li>
-                <li class=''>
-                  <a href="about.html" >About</a>
-                </li>
-                <li class=''>
-                  <a href="contact.html">Contact</a>
-                </li>
-                <li class=''>
-                  <a href="#privacypolicy.html">Privacy Policy</a>
-                </li>
-                <li class=''>
-                  <a href="#faq.html">FAQ</a>
-                </li>
-              </ul>
-            </div>
-            <div class="copyright-footer align-center pull-left">
-              <p>Copyright © 2013 by 3.S.A.N #All Rights Reserved.</p>
-
-            </div>
-          </div>
-        </div>
-      </div> 
-    </footer>
-
-
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3SAN</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+    <script type="text/javascript">
+      //<![CDATA[
+      jQuery(document).ready(function() {
+        // Login form validation
+        $('#form-login').validate();
+      });
+      //]]>
+    </script>
+  </head>
+  <body>
+      <%= yield %>
   </body>
 </html>
