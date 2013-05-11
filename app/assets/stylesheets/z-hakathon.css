@@ -93,3 +93,12 @@ a:hover{ color:#333;}
     width:280px;
     height:75px;
 }
+
+/*footer*/
+/* Set the fixed height of the footer here */
+
+.copyright-footer{margin-left: 4%;}
+
+.copyright-footer{color:#fff;margin-top:10px;}
+
+/* end of footer*/
