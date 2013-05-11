@@ -20,7 +20,6 @@ class MainController < ApplicationController
 	
 	def message_page
 		if params[:id].nil?
-		binding.pry
 			@employee = Employee.all
 			@message = EmployeeStaffMessage.all
 		else

@@ -1,4 +1,6 @@
 Hack3san::Application.routes.draw do
+  post "twilio_controller/process_sms"
+
   get "main/index"
 
   get "main/new"
