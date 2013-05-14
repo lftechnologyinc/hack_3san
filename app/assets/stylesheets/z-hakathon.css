@@ -17,6 +17,18 @@ body{
     line-height:25px;
     background: url(/assets/bgtile.jpg);
 }
+.san-wrap{
+	
+	background: url(../images/trans.png);
+	border-radius:4px;
+	padding:1.5%;
+	width:95%; min-height:330px;
+	border:10px solid rgba(0,0,0,0.1);
+	-moz-background-clip: padding;     /* Firefox 3.6 */
+			-webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+			background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+	
+	}
 svg {
     width:100%;
     height:100%;
@@ -100,5 +112,73 @@ a:hover{ color:#333;}
 .copyright-footer{margin-left: 4%;}
 
 .copyright-footer{color:#fff;margin-top:10px;}
+.widget-box{
 
-/* end of footer*/
+	width:410px;
+
+	margin:0 auto;
+
+	}
+
+	.icon-box{
+	
+		width:128px;
+	
+		font-size:18px;
+	
+		 font-family: "dax-regularregular";
+	 
+	 	 text-align:center;
+	 
+	 	}
+
+			.icon-box img{ margin-bottom:20px;}
+
+				.m-rt{ margin-right:150px;}
+
+				.mainfooter{ text-align:center; padding:15px 0;
+				
+					background: url(../images/shadow3.png) no-repeat center;
+				
+					}
+
+					footer{ text-align:center;font-family: "dax-regularregular";}
+
+					header #logo
+					
+						padding-top:10px; margin:0;
+					
+						background:url(}
+					
+						}
+
+						header #logo, header #logo a
+						
+							width:175px; height:47px;
+						
+							}
+
+							header aside
+							
+								float:right;
+							
+								width:auto;
+							
+								}
+
+							.widget-box{
+	width:410px;
+	margin:0 auto;
+	}
+.icon-box{
+	width:128px;
+	font-size:18px;
+	 font-family: "dax-regularregular";
+	 text-align:center;
+	}
+	.icon-box img{ margin-bottom:20px;}
+	.m-rt{ margin-right:150px;}
+.mainfooter{ text-align:center; padding:15px 0;
+	background: url(../images/shadow3.png) no-repeat center;
+	}
+footer{ text-align:center;font-family: "dax-regularregular";}

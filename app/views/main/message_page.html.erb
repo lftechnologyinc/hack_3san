@@ -1,42 +1,75 @@
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span2">
-			<ul>
-				<% @employee.each do |t| %>
-					<li>	
-					<%= t.name %>
+
+<div class="container">
+	<header>
+	<aside style="float:right">
+
+	Welcome! <%=Employee.find_by_id(session[:current_employee]).name %>
+	</aside>
+	<div id="logo">
+		<h1><a href="index.html">3S.A.N Groups</a></h1>
+	</div>
+	<div class="navbar clearall">
+		<div class="navbar-inner">
+			<ul class="nav">
+				<li>	<%= link_to "Home" ,main_main_page_path%></li>
+				<% @department.each do |t| %>
+					<li>
+					<%= link_to t.department_name ,main_message_page_path(:id=>t.id)%>
 					</li>
 				<% end %>
-				</ul>
+
+				<li> <%=link_to "All Employee",main_message_page_path%> </li>
+				<li><%= link_to "Add Employee", main_add_url %></li>
+			</ul>
+
 		</div>
-		<div class="span10">
-			<div>
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Send By</th>
-							
-							<th>Send To</th>
-							
-							<th>Message</th>
-						</tr>
-					</thead>
-					<tbody>
-						<% @message.each do |t| %>
+	</div>
+	</header>
+
+	<div class="row-fluid san-wrap clearall">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<ul>
+					<% @employee.each do |t| %>
+						<li>	
+						<%= t.name %>
+						</li>
+					<% end %>
+				</ul>
+			</div>
+			<div class="span10">
+				<div>
+					<table class="table">
+						<thead>
 							<tr>
-								<td><%= t.send_from %></td>
-								<td><%= t.send_to %></td>
-								<td><%= t.message %></td>
+								<th>Send By</th>
+
+								<th>Send To</th>
+
+								<th>Message</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% @message.each do |t| %>
+								<tr>
+									<td><%= t.send_from %></td>
+									<td><%= t.send_to %></td>
+									<td><%= t.message %></td>
 								</tr>
-						<%end %>
+							<%end %>
 						</tbody>
 					</table>
+				</div>
+				<%= form_tag("/main/message_deliver", :method => "post") do %>
+					<%= text_field_tag(:message) %>
+					<%= submit_tag("Send") %>
+				<% end %>
+				<!--Body content-->
 			</div>
-<%= form_tag("/main/message_deliver", :method => "post") do %>
-		<%= text_field_tag(:message) %>
-			  <%= submit_tag("Send") %>
-			<% end %>
-			<!--Body content-->
 		</div>
 	</div>
 </div>
+
+</div>
+<footer class="mainfooter">Copyrights &copy; 2013, 3SAN Groups. All Rights Reserved.</footer>-->

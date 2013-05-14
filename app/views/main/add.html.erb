@@ -1,3 +1,34 @@
+<div class="container">
+    <header>
+    		<aside style="float:right">
+
+	Welcome! <%=Employee.find_by_id(session[:current_employee]).name %>
+	</aside>
+        <div id="logo">
+        	<h1><a href="index.html">3S.A.N Groups</a></h1>
+        </div>
+        <div class="navbar clearall">
+            <div class="navbar-inner">
+			<ul class="nav">
+				<li>	<%= link_to "Home" ,main_main_page_path%></li>
+				<% @department.each do |t| %>
+					<li>
+					<%= link_to t.department_name ,main_message_page_path(:id=>t.id)%>
+					</li>
+				<% end %>
+
+				<li> <%=link_to "All Employee",main_message_page_path%> </li>
+				<li><%= link_to "Add Employee", main_add_url %></li>
+			</ul>
+
+		</div>
+        </div>
+    </header>
+    <div class="row-fluid san-wrap clearall">
+    	<div class="page-header">
+        	<h1>Dashboard</h1>
+        </div>
+
 <%= form_for @employee, url: main_add_path do |emp| %>
 
 	<div class="message">
@@ -32,3 +63,5 @@
 <% end %>
 
 <%= button_to "Back", action: "main_page" %>
+</div>
+	<footer class="mainfooter">Copyrights &copy; 2013, 3SAN Groups. All Rights Reserved.</footer>

@@ -1,6 +1,10 @@
 class MainController < ApplicationController
   def add
-  	@employee = Employee.new 
+	@department = Department.all
+  	@employee = Employee.new #(params[:employee])	
+  end
+
+  def delete
   end
 
 
@@ -19,6 +23,7 @@ class MainController < ApplicationController
 	end
 	
 	def message_page
+@department = Department.all
 		if params[:id].nil?
 			@employee = Employee.all
 			@message = EmployeeStaffMessage.all
